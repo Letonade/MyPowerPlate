@@ -12,7 +12,6 @@ function fct_verifier_connexion	(action)
 		dataType: 		"script"
 	});
 
-
 	Request.done(function(msg)
 	{
 		console.log("action: " + action + " - Request done : " + msg);

@@ -11,13 +11,14 @@
 	</div>
 	<div class="container bs-docs-container">
 		<div class="row">
+			<button type='button' class='btn btn-dark' style='font-weight:700;font-size:75%;' onclick='location.href=".."'>Back</button>
 			<div class="col-12">
 				<div class="bs-docs-section">		
 <?php 
 
 	$Scan = scandir(".",1);
 	foreach ($Scan as $key => $value) {
-		if (!in_array($value, [".",".."]) && is_dir($value)) {
+		if (is_dir($value) && $value[0] != ".") {
 			$content = "";
 			$content .= "<h3>";
 			$content .= "-> <button type='button' class='btn btn-warning' style='font-weight:700;font-size:75%;' onclick='location.href=\"".$value."\"'>".$value."</button>";
@@ -27,15 +28,17 @@
 	}
 
 	foreach ($Scan as $key => $value) {
-		if (!in_array($value, [".","..","index.php"]) && !is_dir($value)) {
+		if (!in_array($value, ["index.php"]) && $value[0] != "." && !is_dir($value)) {
 			$content = "";
 			$content .= "<h3>";
-			$content .= "-> <span class='badge badge-info'>".$value."</span>";
+			if (in_array(".".explode(".",$value)[1], [".txt",".md"])) 
+				{$content .= "-> <button type='button' class='btn btn-info' style='font-weight:700;font-size:75%;' onclick='location.href=\"".$value."\"'>".$value."</button>";}
+			else{$content .= "-> <span class='badge badge-info'>".$value."</span>";}
 			$content .= "</h3>";
 			print_r($content);
 		}
 	}
-?>	
+?>				
 				</div>
 			</div>
 		</div>
