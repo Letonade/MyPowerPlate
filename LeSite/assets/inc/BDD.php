@@ -2,7 +2,7 @@
 Const APP_BDD_ADDRESSE 	= 'localhost';
 Const APP_BDD_USER 		= 'root';
 Const APP_BDD_PASSWORD 	= '';
-Const APP_BDD_BASE 		= 'capsadomotique';
+Const APP_BDD_BASE 		= 'gestion_produit';
 
 /**
  * Class d'objet bdd de base

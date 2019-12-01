@@ -4,7 +4,7 @@
 	} else {
 		$uri = 'http://';
 	}
-	header('Location: ./connexion.php');
+	header('Location: ./compte_connexion.php');
 	exit;
 ?>
 Something is wrong with the App installation :-(

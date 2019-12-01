@@ -1,0 +1,34 @@
+Notes
+SELECT * FROM produit WHERE produit.id ='$id' AND password ='$password'
+
+SELECT p.*,cp.comm FROM produit p, clientProduit cp  WHERE cp.idClient = $idClient AND cp.idProduit = p.idProduit
+
+
+https://sql.sh/cours/update
+Recuperer le post puis les infos en lignes, ensuite updates toutes les infos
+
+
+produit{
+	id
+	nom
+	qt
+}
+
+Commande
+{
+	idC
+	idP
+	Comm
+}
+
+User
+{
+	authorisation
+	nom
+	prenom
+	adresse
+	mail
+	idUser
+}
+
+

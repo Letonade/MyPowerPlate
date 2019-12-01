@@ -1,7 +1,6 @@
 <?php 
 include '../../inc/application_include.php';
 
-
 $connAllTables = new APP_BDD;
 $tdStyle = "";
 $sql = "";
